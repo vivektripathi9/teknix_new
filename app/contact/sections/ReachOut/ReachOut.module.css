@@ -1,0 +1,209 @@
+.section {
+  width: 100%;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  padding: clamp(72px, 7vw, 110px) 0 clamp(90px, 9vw, 140px);
+}
+
+.container {
+  width: min(1180px, 88%);
+
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: clamp(40px, 5vw, 64px);
+
+  text-align: center;
+}
+
+.heading h2 {
+  margin: 0;
+
+  font-family: "Alta", serif;
+
+  font-size: clamp(36px, 4vw, 56px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.025em;
+
+  color: #171717;
+}
+
+.groupLabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  color: #9a9a9a;
+}
+
+.groupLine {
+  width: 16px;
+
+  height: 1px;
+
+  background: #d0d0d0;
+
+  flex-shrink: 0;
+}
+
+.headBlock {
+  margin-bottom: clamp(48px, 6vw, 72px);
+
+  padding-bottom: clamp(40px, 5vw, 56px);
+
+  border-bottom: 1px solid #ececec;
+}
+
+.headOffice h3,
+.branch h3 {
+  margin: 0 0 10px;
+
+  font-family: "Alta", serif;
+
+  font-size: clamp(30px, 2.6vw, 38px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.02em;
+
+  color: #171717;
+}
+
+.company {
+  margin: 0 0 14px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  color: #171717;
+}
+
+.address {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.address p {
+  margin: 0;
+
+  font-family: var(--font-secondary);
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  color: #666666;
+}
+
+.contacts {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 16px;
+}
+
+.contacts p {
+  margin: 0;
+
+  font-family: var(--font-secondary);
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #444444;
+}
+
+.contacts span {
+  color: #9a9a9a;
+}
+
+.contacts a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+  color: #c9aa7c;
+}
+
+.branchGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(36px, 4.5vw, 56px) clamp(28px, 3.5vw, 48px);
+}
+
+.branch {
+  padding-top: 4px;
+}
+
+.branch h3 {
+  font-size: clamp(26px, 2.2vw, 32px);
+}
+
+.branch .company {
+  font-size: 15px;
+}
+
+.branch .address p,
+.branch .contacts p {
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .heading h2 {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+
+  .branchGrid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .headOffice h3 {
+    font-size: 30px;
+  }
+}
