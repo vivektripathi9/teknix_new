@@ -1,0 +1,331 @@
+.section {
+  width: 100%;
+
+  background: #080503;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  padding: clamp(80px, 7vw, 120px) 0;
+}
+
+.container {
+  width: min(1280px, 88%);
+
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: clamp(40px, 4vw, 64px);
+}
+
+.eyebrow {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding-left: 28px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(190, 177, 153, 0.75);
+}
+
+.eyebrow::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 16px;
+  height: 1px;
+
+  background: rgba(190, 177, 153, 0.5);
+
+  transform: translateY(-50%);
+}
+
+.controls {
+  display: flex;
+
+  gap: 12px;
+}
+
+.controlButton {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.controlButton:hover:not(:disabled) {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #000000;
+
+  transform: scale(1.06);
+}
+
+.controlButton:disabled {
+  opacity: 0.25;
+
+  cursor: not-allowed;
+}
+
+.body {
+  display: grid;
+
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 5vw, 80px);
+}
+
+.sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 100%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.item {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "Alta", serif;
+
+  font-size: clamp(22px, 2vw, 32px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.02em;
+
+  line-height: 1;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.item:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.itemActive {
+  color: #ffffff;
+
+  transform: translateX(8px);
+}
+
+.description {
+  margin: 36px 0 0;
+
+  max-width: 340px;
+
+  min-height: 110px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.visual {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 400px;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.image {
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0;
+
+  transform: scale(1.06);
+
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.imageActive {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+.dots {
+  position: absolute;
+
+  left: 24px;
+
+  bottom: 24px;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.dot:hover,
+.dotActive {
+  background: #ffffff;
+
+  transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+  .body {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+  }
+
+  .list {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 14px 22px;
+  }
+
+  .item {
+    font-size: 22px;
+  }
+
+  .itemActive {
+    transform: none;
+  }
+
+  .description {
+    margin-top: 24px;
+
+    max-width: 100%;
+  }
+
+  .visual {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .controlButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .visual {
+    min-height: 230px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}

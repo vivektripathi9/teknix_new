@@ -1,0 +1,160 @@
+.section {
+  width: 100%;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  padding: clamp(28px, 2.5vw, 40px) 0 clamp(90px, 8vw, 125px);
+}
+
+.container {
+  width: min(980px, 86%);
+
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+
+  margin-bottom: clamp(40px, 4.5vw, 60px);
+}
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+
+  color: #a4a4a4;
+}
+
+.eyebrowLine {
+  width: 16px;
+  height: 1px;
+
+  background: #d5d5d5;
+
+  flex-shrink: 0;
+}
+
+.heading h2 {
+  margin: 0;
+
+  font-family: "Alta", serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.025em;
+
+  color: #171717;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: clamp(40px, 6vw, 80px);
+
+  row-gap: 0;
+}
+
+.item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 22px 0;
+
+  border-top: 1px solid #ececec;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.item:hover {
+  border-color: #c9aa7c;
+
+  transform: translateY(-2px);
+}
+
+.label {
+  font-family: var(--font-secondary);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #9a9a9a;
+}
+
+.value {
+  font-family: "Alta", serif;
+
+  font-size: clamp(18px, 1.5vw, 24px);
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+
+  color: #171717;
+}
+
+.note {
+  margin: 28px 0 0;
+
+  font-family: var(--font-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: #9a9a9a;
+}
+
+@media (max-width: 700px) {
+  .eyebrow {
+    flex-wrap: wrap;
+
+    font-size: 9px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    padding: 18px 0;
+  }
+
+  .value {
+    font-size: 18px;
+  }
+}

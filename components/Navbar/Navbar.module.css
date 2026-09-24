@@ -31,8 +31,88 @@
   gap: 32px;
 }
 
-.leftNav a,
-.rightNav a {
+.navLink {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.03em;
+
+  white-space: nowrap;
+
+  background: transparent;
+
+  border: 0;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+}
+
+.navLink:hover {
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownPanel {
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+  z-index: 2100;
+
+  padding-top: 16px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateY(6px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0s linear 0.25s;
+}
+
+.dropdown:hover .dropdownPanel,
+.dropdown:focus-within .dropdownPanel {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dropdownItem {
+  display: block;
+
   color: #ffffff;
 
   text-decoration: none;
@@ -50,8 +130,7 @@
   transition: opacity 0.3s ease;
 }
 
-.leftNav a:hover,
-.rightNav a:hover {
+.dropdownItem:hover {
   opacity: 0.6;
 }
 
@@ -301,6 +380,60 @@
 
 .mobileLink:hover .arrow {
   transform: translateX(8px);
+}
+
+.mobileGroup {
+  width: 100%;
+}
+
+.mobileLink {
+  width: 100%;
+
+  background: transparent;
+
+  border: 0;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.mobileSubmenu {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: max-height 0.35s ease;
+}
+
+.mobileSubmenuOpen {
+  max-height: 120px;
+}
+
+.mobileSubLink {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 12px 0 16px 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.72);
+
+  text-decoration: none;
+
+  font-family: "Alta", Arial, sans-serif;
+
+  font-size: clamp(20px, 4.5vw, 32px);
+
+  font-weight: 400;
+
+  line-height: 1;
 }
 
 

@@ -13,6 +13,9 @@ const footerColumns = [
       { name: "Villa Matek", href: "/elevators/villa-matek" },
       { name: "Hydratek", href: "/elevators/hydratek" },
       { name: "Special Purpose", href: "/elevators/special-purpose" },
+      { name: "TESC-20", href: "/tesc-20" },
+      { name: "TESC-50", href: "/tesc-50" },
+      { name: "TMW-15", href: "/tmw-15" },
     ],
   },
 
