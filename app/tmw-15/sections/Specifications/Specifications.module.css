@@ -9,46 +9,15 @@
 }
 
 .container {
-  width: min(980px, 86%);
+  width: min(1100px, 86%);
 
   margin: 0 auto;
 }
 
 .heading {
+  margin-bottom: clamp(28px, 3.5vw, 48px);
+
   text-align: center;
-
-  margin-bottom: clamp(40px, 4.5vw, 60px);
-}
-
-.eyebrow {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 12px;
-
-  margin-bottom: 18px;
-
-  font-family: var(--font-secondary);
-
-  font-size: 10px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.14em;
-
-  color: #a4a4a4;
-}
-
-.eyebrowLine {
-  width: 16px;
-  height: 1px;
-
-  background: #d5d5d5;
-
-  flex-shrink: 0;
 }
 
 .heading h2 {
@@ -67,68 +36,102 @@
   color: #171717;
 }
 
-.grid {
-  display: grid;
+.tableWrapper {
+  width: 100%;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow-x: auto;
 
-  column-gap: clamp(40px, 6vw, 80px);
-
-  row-gap: 0;
+  scrollbar-width: none;
 }
 
-.item {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 8px;
-
-  padding: 22px 0;
-
-  border-top: 1px solid #ececec;
-
-  transition:
-    border-color 0.3s ease,
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+.tableWrapper::-webkit-scrollbar {
+  display: none;
 }
 
-.item:hover {
-  border-color: #c9aa7c;
+.table {
+  width: 100%;
 
-  transform: translateY(-2px);
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
 }
 
-.label {
+.table thead {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.table th {
+  height: 48px;
+
+  padding: 0 10px 14px;
+
+  text-align: center;
+
+  vertical-align: bottom;
+
   font-family: var(--font-secondary);
 
-  font-size: 10px;
+  font-size: 9px;
 
   font-weight: 500;
 
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
+  letter-spacing: 0.14em;
 
   color: #9a9a9a;
 }
 
-.value {
-  font-family: "Alta", serif;
+.table th:first-child {
+  width: 42%;
+}
 
-  font-size: clamp(18px, 1.5vw, 24px);
+.table tbody tr {
+  border-bottom: 1px solid #ececec;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.35s ease;
+}
+
+.table tbody tr:hover {
+  background: #f7f7f7;
+}
+
+.table tbody tr:hover td {
+  color: #c9aa7c;
+}
+
+.table td {
+  height: 54px;
+
+  padding: 12px 10px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  font-family: var(--font-secondary);
+
+  font-size: 13px;
 
   font-weight: 400;
 
-  line-height: 1.25;
+  line-height: 1.4;
 
-  letter-spacing: -0.02em;
+  color: #444444;
 
+  transition: color 0.3s ease;
+}
+
+.table td:first-child {
   color: #171717;
+
+  font-weight: 500;
 }
 
 .note {
-  margin: 28px 0 0;
+  margin: 24px 0 0;
 
   font-family: var(--font-secondary);
 
@@ -136,25 +139,21 @@
 
   line-height: 1.55;
 
+  text-align: center;
+
   color: #9a9a9a;
 }
 
 @media (max-width: 700px) {
-  .eyebrow {
-    flex-wrap: wrap;
-
-    font-size: 9px;
+  .heading h2 {
+    font-size: clamp(34px, 9vw, 44px);
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .table {
+    min-width: 640px;
   }
 
-  .item {
-    padding: 18px 0;
-  }
-
-  .value {
-    font-size: 18px;
+  .table td {
+    font-size: 12px;
   }
 }
