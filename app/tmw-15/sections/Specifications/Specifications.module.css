@@ -1,7 +1,7 @@
 .section {
   width: 100%;
 
-  background: #ffffff;
+  background: #000000;
 
   overflow: hidden;
 
@@ -33,7 +33,7 @@
 
   letter-spacing: -0.025em;
 
-  color: #171717;
+  color: #ffffff;
 }
 
 .tableWrapper {
@@ -59,7 +59,7 @@
 }
 
 .table thead {
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #333333;
 }
 
 .table th {
@@ -79,7 +79,7 @@
 
   letter-spacing: 0.14em;
 
-  color: #9a9a9a;
+  color: #8a8a8a;
 }
 
 .table th:first-child {
@@ -87,7 +87,7 @@
 }
 
 .table tbody tr {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #2a2a2a;
 
   transition:
     background-color 0.3s ease,
@@ -95,7 +95,7 @@
 }
 
 .table tbody tr:hover {
-  background: #f7f7f7;
+  background: #1a1a1a;
 }
 
 .table tbody tr:hover td {
@@ -119,13 +119,13 @@
 
   line-height: 1.4;
 
-  color: #444444;
+  color: #c4c4c4;
 
   transition: color 0.3s ease;
 }
 
 .table td:first-child {
-  color: #171717;
+  color: #ffffff;
 
   font-weight: 500;
 }
@@ -141,7 +141,7 @@
 
   text-align: center;
 
-  color: #9a9a9a;
+  color: #8a8a8a;
 }
 
 @media (max-width: 700px) {
