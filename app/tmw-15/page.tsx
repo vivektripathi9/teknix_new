@@ -1,4 +1,3 @@
-import Connect from "../tesc-20/sections/Connect/Connect";
 import Hero from "./sections/Hero/Hero";
 import Overview from "./sections/Overview/Overview";
 import Specifications from "./sections/Specifications/Specifications";
@@ -9,7 +8,6 @@ export default function Tmw15Page() {
       <Hero />
       <Overview />
       <Specifications />
-      <Connect />
     </main>
   );
 }
