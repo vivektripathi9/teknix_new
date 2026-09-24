@@ -72,6 +72,23 @@
   padding-bottom: clamp(40px, 5vw, 56px);
 
   border-bottom: 1px solid #ececec;
+
+  text-align: center;
+}
+
+.headBlock .groupLabel {
+  justify-content: center;
+}
+
+.headOffice {
+  max-width: 520px;
+
+  margin: 0 auto;
+}
+
+.headOffice .address,
+.headOffice .contacts {
+  align-items: center;
 }
 
 .headOffice h3,

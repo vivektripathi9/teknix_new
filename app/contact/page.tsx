@@ -8,8 +8,8 @@ export default function ContactPage() {
     <main>
       <Hero />
       <ReachOut />
-      <LocationsMap />
       <ContactForm />
+      <LocationsMap />
     </main>
   );
 }

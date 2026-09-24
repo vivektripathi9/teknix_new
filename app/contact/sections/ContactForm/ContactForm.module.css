@@ -7,31 +7,31 @@
 
   overflow: hidden;
 
-  padding: clamp(64px, 5vw, 90px) 0;
+  padding: clamp(72px, 7vw, 110px) 0;
 }
 
 .container {
-  width: min(1180px, 88%);
+  width: min(720px, 88%);
 
   margin: 0 auto;
+}
 
-  display: grid;
+.heading {
+  margin-bottom: clamp(32px, 4vw, 44px);
 
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-
-  align-items: center;
-
-  gap: clamp(32px, 4.5vw, 64px);
+  text-align: center;
 }
 
 .eyebrow {
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
 
+  justify-content: center;
+
   gap: 12px;
 
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
   font-family: var(--font-secondary);
 
@@ -46,25 +46,40 @@
 
 .eyebrowLine {
   width: 16px;
+
   height: 1px;
 
   background: rgba(190, 177, 153, 0.5);
 }
 
-.formColumn h2 {
-  margin: 0 0 28px;
+.heading h2 {
+  margin: 0;
 
   font-family: "Alta", serif;
 
-  font-size: clamp(32px, 3.4vw, 48px);
+  font-size: clamp(34px, 4vw, 52px);
 
   font-weight: 400;
 
-  line-height: 1.02;
+  line-height: 1.05;
 
   letter-spacing: -0.025em;
 
   color: #f4f1eb;
+}
+
+.heading p {
+  max-width: 380px;
+
+  margin: 14px auto 0;
+
+  font-family: var(--font-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .form {
@@ -72,9 +87,15 @@
 
   flex-direction: column;
 
-  gap: 18px;
+  gap: 22px;
+}
 
-  max-width: 380px;
+.row {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
 }
 
 .field {
@@ -101,7 +122,7 @@
 .field textarea {
   width: 100%;
 
-  padding: 0 0 10px;
+  padding: 0 0 12px;
 
   border: 0;
 
@@ -113,7 +134,7 @@
 
   font-family: var(--font-secondary);
 
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.4;
 
@@ -130,7 +151,7 @@
 }
 
 .field textarea {
-  min-height: 52px;
+  min-height: 88px;
 }
 
 .submit {
@@ -140,13 +161,13 @@
 
   justify-content: center;
 
+  align-self: center;
+
   gap: 12px;
 
-  width: fit-content;
+  margin-top: 10px;
 
-  margin-top: 4px;
-
-  padding: 12px 22px;
+  padding: 14px 28px;
 
   border: 1px solid #ffffff;
 
@@ -178,42 +199,16 @@
   transform: translateY(-2px);
 }
 
-.visual {
-  position: relative;
-}
-
-.imageWrapper {
-  position: relative;
-
-  width: 100%;
-
-  max-height: 460px;
-
-  aspect-ratio: 1 / 1;
-
-  overflow: hidden;
-
-  background: #111;
-}
-
-.image {
-  object-fit: cover;
-
-  object-position: center;
-}
-
-@media (max-width: 900px) {
-  .container {
+@media (max-width: 640px) {
+  .row {
     grid-template-columns: 1fr;
-
-    gap: 36px;
   }
 
-  .form {
-    max-width: 100%;
+  .heading h2 {
+    font-size: clamp(30px, 9vw, 40px);
   }
 
-  .imageWrapper {
-    aspect-ratio: 16 / 11;
+  .heading p {
+    font-size: 13px;
   }
 }

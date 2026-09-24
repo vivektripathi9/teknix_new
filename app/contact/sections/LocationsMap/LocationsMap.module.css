@@ -14,6 +14,60 @@
   margin: 0 auto;
 }
 
+.heading {
+  padding-top: clamp(40px, 5vw, 64px);
+
+  margin-bottom: clamp(8px, 1.5vw, 20px);
+
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+
+  font-family: var(--font-secondary);
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  color: #9a9a9a;
+}
+
+.eyebrowLine {
+  width: 16px;
+
+  height: 1px;
+
+  background: #d0d0d0;
+}
+
+.heading h2 {
+  margin: 0;
+
+  font-family: "Alta", serif;
+
+  font-size: clamp(34px, 4vw, 52px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.025em;
+
+  color: #171717;
+}
+
 .mapStage {
   position: relative;
 

@@ -182,6 +182,14 @@ export default function LocationsMap() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        <div className={styles.heading} data-reveal="up">
+          <div className={styles.eyebrow}>
+            <span className={styles.eyebrowLine} />
+            <span>OUR NETWORK</span>
+          </div>
+          <h2>Find us on the map</h2>
+        </div>
+
         <div className={styles.mapStage} ref={stageRef} data-reveal="up">
           <svg
             className={styles.mesh}
